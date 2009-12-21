@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby -rubygems
+$LOAD_PATH << File.join(File.dirname(__FILE__), "..", "lib")
+require 'craps'
+
+dice = Craps::Dice.new
+point = Craps::Point.new
+game = Craps::ConsoleGame.new
+messenger = Craps::Messenger.new(STDOUT)
+dealer = Craps::Dealer.new(messenger, game)
+
+game.dealer = dealer
+game.dice = dice
+game.point = point
+game.messenger = messenger
+game.funds = 100
+game.start
+while command = gets
+  exit if command =~ /(exit)|(quit)/
+  game.run_command(command.strip)
+end

@@ -1,0 +1,45 @@
+h1. Craps
+
+This is a text-based Craps game written in Ruby.
+
+h2. Prerequisites
+
+* Ruby
+* RubyGems
+* ActiveSupport
+
+h2. Getting Started
+
+<pre>
+git clone git://github.com/enriquez/craps.git
+cd craps
+./bin/craps
+</pre>
+
+h2. Commands
+
+Once the game is started you can run one of the following commands to play.
+
+h3. funds
+
+See how much money you have.  You start with $100.
+
+h3. point
+
+See what the current point is.
+
+h3. bet (amount) on the (betting area)
+
+Make a bet.  For example: @bet 10 on the pass line@.  Currently, @pass line@ and @dont pass@ are the only betting areas.
+
+h3. roll
+
+Roll the dice.  You can also roll by just hitting enter without entering a command.
+
+h3. quit
+
+Ends the game. @exit@ does the same.
+
+h2. Development
+
+This game isn't very fun with only two betting areas, so there are obviously plans to build more once I feel comfortable with the architecture.
